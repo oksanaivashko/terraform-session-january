@@ -12,3 +12,4 @@
 - Terraform creates and manages resources on cloud platforms and other services through their application programming interfaces (APIs). Providers enable Terraform to work with virtually any platform or service with an accessible API.
 
 
+![terraform](https://user-images.githubusercontent.com/108756145/216244617-8ef08033-beda-4465-a896-d8db488a86af.jpg)
