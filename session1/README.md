@@ -10,6 +10,7 @@
 - Speed and safety as code enables you to quickly set up your complete infrastructure by running a script. You can do that for every environment, from the development to the production. You can create a server in the second and delete as well, instead of doing manually. Also, human mistakes and with the code you avoid this problem.
 ## How does Terraform work?
 - Terraform creates and manages resources on cloud platforms and other services through their application programming interfaces (APIs). Providers enable Terraform to work with virtually any platform or service with an accessible API.
+<<<<<<< HEAD
 ## Terraform offers a declarative approach over an imperative one
 
 - Terraform - is a declarative, it gives you approach to managing infrastructure, because it allows you to focus on exactly what you want the infrastructure to be. You do this by writing code in a definition file in which you can specify the desired state of the infrastructure.
@@ -18,3 +19,6 @@
 
 
 
+=======
+<img width="1200" alt="terr" src="https://user-images.githubusercontent.com/108756145/216245119-00f567a8-d0f1-45b2-b21b-f286381a353a.png">
+>>>>>>> 71ff1459015fe37952a54825baead4d3480a058f
