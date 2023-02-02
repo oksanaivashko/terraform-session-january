@@ -30,4 +30,3 @@
 
 =======
 <img width="1200" alt="terr" src="https://user-images.githubusercontent.com/108756145/216245119-00f567a8-d0f1-45b2-b21b-f286381a353a.png">
->>>>>>> 71ff1459015fe37952a54825baead4d3480a058f
