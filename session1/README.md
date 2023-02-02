@@ -26,7 +26,4 @@
 ## Terraform enables an immutable infrastructure
 - Immutable infrastructure creates distinct resources. To roll an update onto a web server, you need to create a new server with the relevant updates and bring down the old one. Resources are replaced rather than changed over time
 
-
-
-=======
 <img width="1200" alt="terr" src="https://user-images.githubusercontent.com/108756145/216245119-00f567a8-d0f1-45b2-b21b-f286381a353a.png">
