@@ -23,7 +23,7 @@ Resource Block expects 2 labels which are "First label" and "Second label"
         “was_instance” 
         ~~~
 
-2.  Second Label:
+  1. Second Label:
        - This is defined by Author 
        - This label indicates the logical name of the resource. Logical name or id must be unique 
 
