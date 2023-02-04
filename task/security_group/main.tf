@@ -1,7 +1,6 @@
 resource "aws_security_group" "Task" {
   name        = "main"
   description = "Allow inbound traffic"
-  vpc_id      = "vpc-0a42426aa52e0c8f9"
 
   ingress {
     description      = "Allow SSH from VPC"
@@ -34,9 +33,6 @@ ingress {
     protocol         = "tcp"
     cidr_blocks      = [aws_vpc.main.cidr_block]
   }
-
-
-
 
 
   egress {
