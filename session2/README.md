@@ -27,10 +27,10 @@ Resource Block expects 2 labels which are "First label" and "Second label"
        - This is defined by Author 
        - This label indicates the logical name of the resource. Logical name or id must be unique 
 
-        ~~~
+      ~~~
          example: 
          "first_ec2"
-         ~~~
+      ~~~
 
  ### Data Source Block 
  - Fetch the data from existing resources 
@@ -39,6 +39,7 @@ Resource Block expects 2 labels which are "First label" and "Second label"
  An argument assigns a value to a particular name 
  The identifier before he equals sign is the argument name, and the expression after the equals sign is the argument’s value 
  Argument consist of name and value 
+
  ~~~
  Example:
  Argument Name: 
