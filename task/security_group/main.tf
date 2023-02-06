@@ -1,4 +1,4 @@
-resource "aws_security_group" "Task" {
+resource "aws_security_group" "main" {
   name        = "main"
   description = "Allow inbound traffic"
   vpc_id      = "vpc-0a42426aa52e0c8f9"
