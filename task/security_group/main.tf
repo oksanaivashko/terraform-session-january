@@ -28,7 +28,7 @@ resource "aws_security_group" "Task" {
     cidr_blocks      = ["0.0.0.0/0"]
   }
 ingress {
-    description      = "Allow RDS port form VPC"
+    description      = "Allow MySQL port from VPC"
     from_port        = 3306
     to_port          = 3306
     protocol         = "tcp"
@@ -39,7 +39,7 @@ ingress {
   egress {
     from_port        = 0
     to_port          = 0
-    protocol         = "-1"
+    protocol         = "-1" # All ports open 
     cidr_blocks      = ["0.0.0.0/0"]
   }
 }
