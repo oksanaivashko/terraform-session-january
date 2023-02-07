@@ -4,7 +4,7 @@ variable "instancce_type" {
     default = "t2.micro"
 }
 
-variable  "ami" {
+variable "ami" {
     type = string
     description = "AMI for the ec2 instance"
     default = "ami-06e85d4c3149db26a"
