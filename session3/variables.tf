@@ -1,4 +1,4 @@
-variable "instancce_type" {
+variable "instance_type" {
     type = string
     description = "This is an instance type for ec2 instances"
     default = "t2.micro"
