@@ -45,7 +45,7 @@ resource "aws_internet_gateway" "int_gway" {
 #Attach to the int gateway
 
 resource "aws_route_table" "public_route_table" {
-  vpc_id = aws_vpc.task.id
+  vpc_id = aws_vpc.task_vpc.id
 
   route {
     cidr_block = "10.0.1.0/16"
