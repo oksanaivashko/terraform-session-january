@@ -13,7 +13,7 @@ variable "ami" {
 variable "env" {
     type = string
     description = "indicates the environment"
-    dafault = "dev"
+    default = "dev"
     
 }
 
