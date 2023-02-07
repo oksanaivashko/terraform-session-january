@@ -25,7 +25,8 @@ resource "aws_instance" "first_ec2" {     #first label predifined by terraform a
 #first_label.second_label.attribute
 #first_label and the second label "aws_security_group.main_sg.id"
 
-#Attribute knows after createn 
+#Attribute knows after creation 
+ 
 #whenever you use reference you don't use ""
 #"aws_security_group.main_sg.id" = static or hard coder calue (string)
 #aws_security_group.main_sg.id = referrence to resource (string, number, booleun)
