@@ -5,11 +5,11 @@
 #4. Tenancy = default  
 #5. tags = optinal  
 
-
-resource "aws_vpc" "task_vpc" {
+resource "aws_vpc" "task_vpc" {       
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
-}
+
 tags = {                               #tags {} = expecting a map 
     Name = task_vpc
   }
+}
