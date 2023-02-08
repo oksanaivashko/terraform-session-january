@@ -1,5 +1,5 @@
-resource "aws_instance" "first_ec2" {
-  ami           = "ami-06e85d4c3149db26a"
+resource "aws_instance" "first_ec2" { #first label predifined by terraform and second label by author
+  ami           = "ami-06e85d4c3149db26a" #arguments (key and value)
   instance_type = "t2.micro"
   tags = {
     Name        = "first"
@@ -17,7 +17,7 @@ resource "aws_instance" "first_ec2" {
 //   1.First Label: 
 //       - This is predefined by Terraform 
 //       - This label indicates the resource 
-//       Example: “was_instance” 
+//       Example: “aws_instance” 
 //   2. Second Label 
 //       - This is defined by Author 
 //       - This label indicates the logical name of the resource. Logical name or id must be unique 
@@ -35,4 +35,3 @@ resource "aws_instance" "first_ec2" {
 // Working directory: 
 // - Where you have all your working configuration file  
 // You run terraform command on your working directory 
-

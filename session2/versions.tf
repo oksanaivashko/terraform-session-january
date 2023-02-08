@@ -19,3 +19,4 @@ terraform {
 # ">= 0.13, < 0.14" every patch version included
 # ~> 0.13 = 0.13.0 - 0.13.x
 # ~> = lazy constraints 
+# we nned version, they are not stable 
