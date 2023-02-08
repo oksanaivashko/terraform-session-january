@@ -45,4 +45,4 @@ Resource Block expects 2 labels which are "First label" and "Second label"
 ~~~
  ### Working directory: 
  - Where you have all your working configuration file  
- You run terraform command on your working directory 
+ You run terraform command on your working directory
