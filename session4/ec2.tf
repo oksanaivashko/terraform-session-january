@@ -3,10 +3,13 @@ resource "aws_instance" "main_fronted" {
   instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.test_vpc_sg.id] 
   tags = {                               
-    Name = var.env-instance
+    Name = "${var.env}-instance"
   }
 }
-
+#variable + hardcode value
+#var.env + instance 
+#hard code takes string
+#${var.env} tells string and hard code inside "-instance"
 
 resource "aws_instance" "main_fronted" { 
   ami = data.aws_ami.amazon_linux_2.id                        
