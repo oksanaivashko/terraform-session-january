@@ -6,6 +6,8 @@
 #5. tags = optinal  
 
 resource "aws_vpc" "task_vpc" {       
-  cidr_block       = "10.0.0.0/16"
+  name             = var.vpc_name
+  cidr_block       = var.cidr_block
   instance_tenancy = "default"
+  tags = var.vpc_tags
 }
