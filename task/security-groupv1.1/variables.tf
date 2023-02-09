@@ -19,6 +19,7 @@ variable "vpc_id" {
 variable "value.cidr" {
   type = string
   description = "CIDR Block"
+  default = "0.0.0.0/0"
 }
 
 variable "ssh_port" {
