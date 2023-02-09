@@ -27,7 +27,8 @@ variable "cidr" {
   default = "0.0.0.0/0"
 }
 
-variable "ssh_port" {
-  description = "ingress type"
-  type        = string
+variable "port1" {
+  type = string
+  description = "specify port number"
+  default = "22"
 }

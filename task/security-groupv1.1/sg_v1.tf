@@ -14,8 +14,7 @@ ingress   {
   egress   {
     from_port        = 0
     to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = var.value
-   
-  }
+    protocol         = var.protocol
+    cidr_blocks      = [var.cidr]
+    }
 }
