@@ -13,7 +13,7 @@ variable "public_subnet_a" {
     description = "specify az for subnet"
     default = "us-west-2a"
 }
-ariable "vpc_cidr_block_b" {
+variable "vpc_cidr_block_b" {
   type = string
   description = "specify CIDR block for VPC"
   default = "10.0.2.0/16"
