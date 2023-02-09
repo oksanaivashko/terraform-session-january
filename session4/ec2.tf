@@ -1,4 +1,4 @@
-resource "aws_instance" "main_fronted" { 
+resource "aws_instance" "main_back" { 
   ami = data.aws_ami.amazon_linux_2.id                        
   instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.test_vpc_sg.id] 
@@ -11,7 +11,7 @@ resource "aws_instance" "main_fronted" {
 #hard code takes string
 #${var.env} tells string and hard code inside "-instance"
 
-resource "aws_instance" "main_fronted" { 
+resource "aws_instance" "main_front" { 
   ami = data.aws_ami.amazon_linux_2.id                        
   instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.test_vpc_sg.id] 
