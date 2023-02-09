@@ -8,7 +8,7 @@ ingress   {
     from_port        = var.port1
     to_port          = var.port1
     protocol         = var.protocol
-    cidr_block       = [var.cidr]
+    cidr_blocks      = [var.cidr]
   }
 
   egress   {
