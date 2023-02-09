@@ -13,13 +13,13 @@ resource "aws_subnet" "public_a" {
   availability_zone = var.public_subnet_a
   cidr_block       = var.public_subnet_cidr_block
 }
-#
-#resource "aws_subnet" "public_b" {
-#    vpc_id = aws_vpc.task_vpc.id
-#  availability_zone = var.public_subnet_b
-#  cidr_block       = var.vpc_cidr_block_b
-#}
-#
+
+resource "aws_subnet" "public_b" {
+    vpc_id = aws_vpc.task_vpc.id
+  availability_zone = var.public_subnet_b
+  cidr_block       = var.public_subnet_cidr_block_b
+}
+
 #resource "aws_subnet" "public_c" {
 #    vpc_id = aws_vpc.task_vpc.id
 #  availability_zone = "us-west-2c"
