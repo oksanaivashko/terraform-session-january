@@ -16,7 +16,7 @@ variable "vpc_id" {
 variable "value.cidr" {
   type = string
   description = "CIDR Block"
-  default = ["0.0.0.0/0"]
+  default = "0.0.0.0/0"
 }
 variable "port1" {
   type = list
