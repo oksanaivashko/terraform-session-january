@@ -5,10 +5,10 @@ resource "aws_security_group" "sg_v1"{
 
 ingress   {
     description      = var.description
-    from_port        = element(var.port1, count.index)
-    to_port          = element(var.port1, count.index)
+    from_port        = var.ssh_port
+    to_port          = var.ssh_port
     protocol         = var.protocol
-    cidr_block       = value.cidr
+    cidr_block       = var.value.cidr
   } 
 
   egress   {
