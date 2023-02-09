@@ -3,10 +3,10 @@ variable "vpc_name" {
     description = "name for vpc"
     default = "task_vpc"
 }
-variable "vpc_cidr_block" {
+variable "vpc_cidr_block_a" {
   type = string
   description = "specify CIDR block for VPC"
-  default = "10.0.0.0/16"
+  default = "10.0.1.0/16"
 }
 variable "public_subnet_a" {
     type = string
