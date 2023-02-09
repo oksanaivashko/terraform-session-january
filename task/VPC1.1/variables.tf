@@ -8,11 +8,22 @@ variable "vpc_cidr_block" {
   description = "specify CIDR block for VPC"
   default = "10.0.0.0/16"
 }
-variable "us-west-2a" {
+variable "public_subnet_a" {
     type = string
     description = "specify az"
-    default = ""
+    default = "us-west-2a"
 }
+variable "cidr_subnet_a" {
+    type = string
+    description = "specify cidr for the subnet"
+    default = "10.0.1.0/24"
+}
+
+
+
+
+
+
 ##subnets
 #task_vpc_subnets = {
 # "a" = {
