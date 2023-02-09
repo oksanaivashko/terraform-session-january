@@ -10,6 +10,13 @@ ingress   {
     protocol         = var.protocol
     cidr_blocks      = [var.cidr]
   }
+ingress   {
+    description      = var.description
+    from_port        = var.port2
+    to_port          = var.port2
+    protocol         = var.protocol
+    cidr_blocks      = [var.cidr]
+  }
 
   egress   {
     from_port        = 0
@@ -18,3 +25,4 @@ ingress   {
     cidr_blocks      = [var.cidr]
     }
 }
+

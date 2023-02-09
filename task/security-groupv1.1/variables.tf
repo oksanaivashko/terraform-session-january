@@ -32,3 +32,8 @@ variable "port1" {
   description = "specify port number"
   default = "22"
 }
+variable "port2" {
+  type = string
+  description = "specify port number"
+  default = "80"
+}
