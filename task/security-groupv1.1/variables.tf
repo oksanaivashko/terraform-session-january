@@ -9,9 +9,9 @@ variable "description" {
     default = "sg_v1"
 }
 variable "vpc_id" {
-    type = "vpc-0a42426aa52e0c8f9"
+    type = string
     description = "This is vpc id"
-    default = "sg_v1"
+    default = "vpc-0a42426aa52e0c8f9"
 }
 variable "port1" {
   type = list
