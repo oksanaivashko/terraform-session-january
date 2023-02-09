@@ -17,7 +17,7 @@ resource "aws_subnet" "public_a" {
 resource "aws_subnet" "public_b" {
     vpc_id = aws_vpc.task_vpc.id
   availability_zone = var.public_subnet_b
-  cidr_block       = var.cidr_subnet_b
+  cidr_block       = var.vpc_cidr_block_b
 }
 
 #resource "aws_subnet" "public_c" {

@@ -10,14 +10,21 @@ variable "vpc_cidr_block" {
 }
 variable "public_subnet_a" {
     type = string
-    description = "specify az"
+    description = "specify az for subnet"
     default = "us-west-2a"
 }
-variable "cidr_subnet_a" {
-    type = string
-    description = "specify cidr for the subnet"
-    default = "10.0.1.0/24"
+ariable "vpc_cidr_block_b" {
+  type = string
+  description = "specify CIDR block for VPC"
+  default = "10.0.2.0/16"
 }
+variable "cidr_subnet_b" {
+    type = string
+    description = "specify az for subnet"
+    default = "	us-west-2b"
+}
+
+
 
 
 
