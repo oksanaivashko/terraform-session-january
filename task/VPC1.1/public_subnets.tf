@@ -14,12 +14,12 @@ resource "aws_subnet" "public_a" {
   cidr_block       = var.cidr_subnet_a
 }
 
-#resource "aws_subnet" "public_b" {
-#    vpc_id = aws_vpc.task_vpc.id
-#  availability_zone = "us-west-2b"
-#  cidr_block       = "10.0.2.0/24"
-#}
-#
+resource "aws_subnet" "public_b" {
+    vpc_id = aws_vpc.task_vpc.id
+  availability_zone = var.public_subnet_b
+  cidr_block       = var.cidr_subnet_b
+}
+
 #resource "aws_subnet" "public_c" {
 #    vpc_id = aws_vpc.task_vpc.id
 #  availability_zone = "us-west-2c"
