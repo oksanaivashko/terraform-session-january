@@ -37,3 +37,43 @@ variable "port2" {
   description = "specify port number"
   default = "80"
 }
+variable "port3" {
+  type = string
+  description = "specify port number"
+  default = "433"
+}
+variable "port4" {
+  type = string
+  description = "specify port number"
+  default = "21"
+}
+variable "port5" {
+  type = string
+  description = "specify port number"
+  default = "23"
+}
+variable "port6" {
+  type = string
+  description = "specify port number"
+  default = "24"
+}
+variable "port7" {
+  type = string
+  description = "specify port number"
+  default = "25"
+}
+variable "port8" {
+  type = string
+  description = "specify port number"
+  default = "26"
+}
+variable "port9" {
+  type = string
+  description = "specify port number"
+  default = "27"
+}
+variable "port10" {
+  type = string
+  description = "specify port number"
+  default = "28"
+}
