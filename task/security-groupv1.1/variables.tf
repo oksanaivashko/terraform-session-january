@@ -16,5 +16,10 @@ variable "vpc_id" {
 variable "port1" {
   type = list
   description = "Specify ports"
-  default = [ 22, 80, 443, 3306]
+  default = [ 22 ]
+}
+variable "protocol" {
+  type = string
+  description = "This tcp protocol for ssh"
+  default ="tcp"
 }
