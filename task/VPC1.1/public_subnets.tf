@@ -8,11 +8,11 @@
 #To make these subnets public we need to atach int-gateway
 
 
-#resource "aws_subnet" "public_a" {
-#    vpc_id = aws_vpc.task_vpc.id
-#  availability_zone = 
-#  cidr_block       = "10.0.1.0/24"
-#}
+resource "aws_subnet" "public_a" {
+    vpc_id = aws_vpc.task_vpc.id
+  availability_zone = var.public_subnet_a
+  cidr_block       = var.cidr_subnet_a
+}
 
 #resource "aws_subnet" "public_b" {
 #    vpc_id = aws_vpc.task_vpc.id
