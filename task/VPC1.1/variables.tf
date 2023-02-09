@@ -6,7 +6,7 @@ variable "vpc_name" {
 variable "cidr_block" {
     type = string
     description = "specify cidr block"
-    default = ["10.0.0.0/16"]
+    default = "10.0.0.0/16"
 }
 variable "vpc_tags" {
     type = string

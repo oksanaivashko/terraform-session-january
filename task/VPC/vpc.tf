@@ -9,5 +9,7 @@ resource "aws_vpc" "task_vpc" {
   name             = var.vpc_name
   cidr_block       = var.cidr_block
   instance_tenancy = "default"
-  tags = var.vpc_tags
-}
+  tags = {
+    name = var.vpc_tags
+    } 
+  }
