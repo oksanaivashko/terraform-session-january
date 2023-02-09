@@ -8,7 +8,7 @@ ingress   {
     from_port        = var.ssh_port
     to_port          = var.ssh_port
     protocol         = var.protocol
-    cidr_block       = [var.value.cidr]
+    cidr_block       = [var.cidr]
   }
 
   egress   {
