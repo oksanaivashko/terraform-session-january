@@ -16,7 +16,7 @@ variable "vpc_id" {
     default = "vpc-0a42426aa52e0c8f9"
 }
 
-variable "value.cidr" {
+variable "cidr" {
   type = string
   description = "CIDR Block"
   default = "0.0.0.0/0"
