@@ -13,6 +13,12 @@ variable "ami" {
 variable "env" {
     type = string
     description = "indicates the environment"
-    default = "dev"
+    default = "prod"
+    
+}
+variable "env" {
+    type = string
+    description = "indicates the environment"
+    default = "dev-instance"
     
 }
