@@ -30,6 +30,16 @@ variable "public_subnet_cidr_block_b" {
   description = "specify CIDR block for VPC"
   default = "10.0.2.0/24"
 }
+variable "public_subnet_c" {
+    type = string
+    description = "specify az for subnet"
+    default = "us-west-2c"
+}
+variable "public_subnet_cidr_block_c" {
+  type = string
+  description = "specify CIDR block for VPC"
+  default = "10.0.3.0/24"
+}
 
 
 
