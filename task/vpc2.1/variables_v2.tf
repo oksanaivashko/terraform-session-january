@@ -11,7 +11,7 @@ variable "vpc_cidr_block" {
 }
 #   --- Public Subnets ---
 
-variable "my_subnets" {
+variable "my_subnets"{
  type = map(object({
    cidr = string
    tags = map(string)
@@ -22,33 +22,21 @@ variable "my_subnets" {
      az = "us-west-2a"
      cidr = "10.0.1.0/24"
      tags = {
-       "Name" = "public_subnet_a"
+       "key" = "public_subnet_a"
      }
    }
- }
- description = "Subnets for My VPC"
-}
-variable "my_subnets" {
- type = map(object({
-   cidr = string
-   tags = map(string)
-   az   = string
- }))
- default = {
-   "a" = {
+   "b" = {
      az = "us-west-2b"
      cidr = "10.0.2.0/24"
      tags = {
-       "Name" = "public_subnet_b"
+       "key" = "public_subnet_b"
      }
    }
  }
- description = "Subnets for My VPC"
 }
 
 
 
-#variable "public_subnet_b" {
 #    type = string
 #    description = "specify az for subnet"
 #    default = "us-west-2b"
