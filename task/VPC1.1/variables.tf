@@ -91,7 +91,24 @@ variable "private_subnet_cidr_block_c" {
   description = "specify CIDR block for VPC"
   default = "10.0.12.0/24"
 }
+
+#--- Create a Route Table - Private --- 
+variable "public_route_table" {
+  description = "create a route table"
+  default = "task_vpc"
+}
+
+#--- Create a NatGateway ---
+
+variable "nat_gway" {
+  type = string
+  description = "create a natgateay"
+  default = "task_vpc"
+}
+
+
 #   --- Allocate Elastic IP Address ---
+
 variable "nat_eip"{
   type = string
   description = "ellocate an Elastic IP address to the NAT gateway."
