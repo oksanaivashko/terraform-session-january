@@ -21,7 +21,7 @@ resource "aws_subnet" "private_subnet_c" {
 #   --- Create NAT gateway ---  
 
 resource "aws_nat_gateway" "nat_gway"{
-    subnet_id = var.public_subnet_az
+    subnet_id = var.public_subnet_az[0]
     connectivity_type = "public"
     allocation_id = var.nat_eip
     tags ={
