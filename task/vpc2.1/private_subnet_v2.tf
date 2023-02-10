@@ -9,7 +9,7 @@
 resource "aws_subnet" "private_subnet_b" {
     vpc_id = aws_vpc.task_vpc.id
     availability_zone = var.private_subnet_az[1]
-  cidr_block = var.private_cidr_block[1]
+  cidr_block = var.private_subnet_cidr_block[1]
 }
 
 resource "aws_subnet" "private_subnet_c" {
