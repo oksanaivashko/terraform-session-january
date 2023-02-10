@@ -26,8 +26,10 @@ resource "aws_nat_gateway" "nat_gway" {
 }
 
 #Allocate Elastic IP Address
-resource "aws_eip" "nat_eip"{
-    vpc = var.vpc_name
-    nat_gway = var.nat_eip
 
+resource "aws_eip" "nat_gway_eip"{
+    vpc = true
+    tags = {
+        Name = var.nat_eip
+    }
 }
