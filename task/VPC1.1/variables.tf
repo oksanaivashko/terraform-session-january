@@ -58,4 +58,15 @@ variable "public_route_table_cidr" {
   default = "0.0.0.0/0"
 }
 
+#Create subnets - private 
 
+variable "private_subnet_a" {
+    type = string
+    description = "specify az for private subnet"
+    default = "us-west-2a"
+}
+variable "private_subnet_cidr_block_a" {
+  type = string
+  description = "specify CIDR block for VPC"
+  default = "10.0.10.0/24"
+}
