@@ -22,7 +22,7 @@ resource "aws_subnet" "private_subnet_c" {
 
 resource "aws_nat_gateway" "nat_gway" {
   connectivity_type = "public"
-  subnet_id         = var.nat_gway
+  subnet_id         = var.public_subnet_az
 }
 
 #Allocate Elastic IP Address
