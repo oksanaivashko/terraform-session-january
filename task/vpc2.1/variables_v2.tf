@@ -23,6 +23,13 @@ variable "public_subnet_cidr_block" {
   default = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
 }
 
+#   --- Create a  Public Route Table
+
+variable "public_route_table" {
+  description = "create a public route table"
+  default = "task_vpc"
+}
+
 #   --- Create Internet Gateway --- 
 
 variable "int_gway" {
@@ -30,15 +37,10 @@ variable "int_gway" {
   description = "create a intgateay"
   default = "task_vpc"
 }
-#   --- Create a Route Table - Public 
-
-variable "public_route_table" {
-  description = "create a route table"
-  default = "task_vpc"
-}
 
 
-#--- Create Subnets - Private ----
+
+#--- Create a Private Subnets ----
 
 variable "private_subnet_az" {
   type = list
@@ -52,9 +54,9 @@ variable "private_subnet_cidr_block" {
   default = ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"]
 }
 
-#--- Create a Route Table - Private --- 
-variable "public_route_table" {
-  description = "create a route table"
+#--- Create a Private Route Table --- 
+variable "private_route_table" {
+  description = "create a private route table"
   default = "task_vpc"
 }
 
