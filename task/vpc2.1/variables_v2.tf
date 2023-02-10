@@ -36,10 +36,6 @@ variable "public_route_table" {
   description = "create a route table"
   default = "task_vpc"
 }
-variable "public_route_table_cidr" {
-  description = "definied  rcidr block for route table"
-  default = "0.0.0.0/0"
-}
 
 
 #--- Create Subnets - Private ----
