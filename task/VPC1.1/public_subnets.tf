@@ -33,19 +33,16 @@ resource "aws_internet_gateway" "int_gway" {
   vpc_id = aws_vpc.task_vpc.id
 }
 
+#Create a route table - public 
+#Choose VPC 
+#Name for route table
+#Attach to the int gateway
 
+resource "aws_route_table" "public_route_table" {
+  vpc_id = aws_vpc.task_vpc.id
 
-##Create a route table - public 
-##Choose VPC 
-##Name for route table
-##Attach to the int gateway
-#
-#resource "aws_route_table" "public_route_table" {
-#  vpc_id = aws_vpc.task_vpc.id
-#
-#  route {
-#    cidr_block = "0.0.0.0/0"
-#    gateway_id = aws_internet_gateway.int_gway.id
-#  }
-#}
-#
+  route {
+    cidr_block = var.public_route_table_cidr
+    gateway_id = aws_internet_gateway.int_gway.id
+  }
+}
