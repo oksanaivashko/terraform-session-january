@@ -21,16 +21,10 @@ variable "my_subnets"{
    "a" = {
      az = "us-west-2a"
      cidr = "10.0.1.0/24"
-     tags = {
-       "key" = "public_subnet_a"
-     }
    }
    "b" = {
      az = "us-west-2b"
      cidr = "10.0.2.0/24"
-     tags = {
-       "key" = "public_subnet_b"
-     }
    }
  }
 }
