@@ -12,17 +12,17 @@ resource "aws_subnet" "private_a" {
   cidr_block       = var.private_subnet_cidr_block_a
 }
 
-#resource "aws_subnet" "private_b" {
-#    vpc_id = aws_vpc.task_vpc.id
-#  availability_zone = "us-west-2b"
-#  cidr_block       = "10.0.11.0/24"
-#}
-#
-#resource "aws_subnet" "private_c" {
-#    vpc_id = aws_vpc.task_vpc.id
-#  availability_zone = "us-west-2c"
-#  cidr_block       = "10.0.12.0/24"
-#}
+resource "aws_subnet" "private_b" {
+    vpc_id = aws_vpc.task_vpc.id
+  availability_zone = var.private_subnet_b
+  cidr_block       = var.private_subnet_cidr_block_b
+}
+
+resource "aws_subnet" "private_c" {
+    vpc_id = aws_vpc.task_vpc.id
+  availability_zone = var.private_subnet_c
+  cidr_block       = var.private_subnet_cidr_block_c
+}
 
 #Create NAT gateway  
 #
