@@ -19,11 +19,28 @@ variable "my_subnets" {
  }))
  default = {
    "a" = {
-     az = "us-west-2b"
+     az = "us-west-2a"
      cidr = "10.0.1.0/24"
-     #tags = {
-     #  "Name" = "public_subnet_a"
-     #}
+     tags = {
+       "Name" = "public_subnet_a"
+     }
+   }
+ }
+ description = "Subnets for My VPC"
+}
+variable "my_subnets" {
+ type = map(object({
+   cidr = string
+   tags = map(string)
+   az   = string
+ }))
+ default = {
+   "a" = {
+     az = "us-west-2b"
+     cidr = "10.0.2.0/24"
+     tags = {
+       "Name" = "public_subnet_b"
+     }
    }
  }
  description = "Subnets for My VPC"

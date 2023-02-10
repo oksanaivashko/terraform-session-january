@@ -1,6 +1,6 @@
 #   --- Create Subnets - Public ---
 
-resource "aws_subnet" "public_subnet_a" {
+resource "aws_subnet" "public_subnet" {
     vpc_id = aws_vpc.task_vpc.id
     az = var.my_subnets
   cidr  = each.value["cidr"]
