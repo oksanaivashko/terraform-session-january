@@ -14,7 +14,7 @@ variable "vpc_cidr_block" {
 variable "public_subnet_az" {
   type = list
   description = "specify az for subnets"
-  default = ["a", "b", "c"]
+  default = ["us-west-2a", "us-west2-b", "us-west-2c"]
 }
 
 variable "public_subnet_cidr_block" {
@@ -38,7 +38,7 @@ variable "public_subnet_cidr_block" {
 #     }
 #   }
 #   "b" = {
-#     az = "us-west-2b"
+#     az = "us-west2-b"
 #     cidr = "10.0.2.0/24"
 #     tags = {
 #       "key" = "public_subnet_b"
