@@ -2,9 +2,8 @@
 
 resource "aws_subnet" "public_subnet" {
     vpc_id = aws_vpc.task_vpc.id
-    az = var.my_subnets
-  cidr  = each.value["cidr"]
-  tags = each.key["tags"]
+    az = var.public_subnet_az
+  cidr  = var.public_subnet_cidr_block[0]
 }
 
 #resource "aws_subnet" "public_b" {
