@@ -23,6 +23,22 @@ variable "public_subnet_cidr_block" {
   default = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
 }
 
+#--- Create subnets - private ----
+
+variable "private_subnet_az" {
+  type = list
+  description = "specify az for subnets"
+  default = ["us-west-2a", "us-west-2b", "us-west-2c"]
+}
+
+variable "private_subnet_cidr_block" {
+  type = list
+  description = "specify CIDR block for VPC"
+  default = ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"]
+}
+
+
+
 #variable "my_subnets"{
 # type = map(object({
 #   cidr = string
