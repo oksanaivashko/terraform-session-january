@@ -25,7 +25,9 @@ resource "aws_nat_gateway" "nat_gway" {
   subnet_id         = aws_subnet.public_a.id
 }
 
-#   --- Allocate Elastic IP Address ---
-resource "var.nat_eip" {
-    vpc = true 
+#Allocate Elastic IP Address
+resource "aws_eip" "nat_eip"{
+    vpc = var.vpc_name
+    nat_gway = var.nat_eip
+
 }

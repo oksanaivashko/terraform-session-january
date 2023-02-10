@@ -114,4 +114,3 @@ variable "nat_eip"{
   description = "ellocate an Elastic IP address to the NAT gateway."
   default = "nat_gway"
 }
-
