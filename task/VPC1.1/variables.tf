@@ -21,9 +21,9 @@ variable "my_subnets" {
    "a" = {
      az = "us-west-2b"
      cidr = "10.0.1.0/24"
-     tags = {
-       "Name" = "public_subnet_a"
-     }
+     #tags = {
+     #  "Name" = "public_subnet_a"
+     #}
    }
  }
  description = "Subnets for My VPC"
