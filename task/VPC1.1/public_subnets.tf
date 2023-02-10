@@ -25,25 +25,16 @@ resource "aws_subnet" "public_c" {
   cidr_block       = var.public_subnet_cidr_block_c
 }
 
-#resource "aws_subnet" "public_c" {
-#    vpc_id = aws_vpc.task_vpc.id
-#  availability_zone = "us-west-2c"
-#  cidr_block       = "10.0.3.0/24"
-#}
-#
-##Create Internet Gateway and attach it to the Public-Route-Table 
-## Name tag 
-##Create and click to attach to VPC  
-##Route table to connect internet you need edit “subnet associate” drop down and add it 
-#
-#resource "aws_internet_gateway" "int_gway" {
-#  vpc_id = aws_vpc.task_vpc.id
-#
-#  tags = {
-#    Name = "int_gway"
-#  }
-#}
-#
+
+#Create Internet Gateway and attach it to the Public-Route-Table 
+#Route table to connect internet you need edit “subnet associate” drop down and add it 
+
+resource "aws_internet_gateway" "int_gway" {
+  vpc_id = aws_vpc.task_vpc.id
+}
+
+
+
 ##Create a route table - public 
 ##Choose VPC 
 ##Name for route table

@@ -40,21 +40,13 @@ variable "public_subnet_cidr_block_c" {
   description = "specify CIDR block for VPC"
   default = "10.0.3.0/24"
 }
+#Create Internet Gateway and attach it to the Public-Route-Table
 
-
-
-
-#variable "subnet_cidr_block_b" {
-#  type = string
-#  description = "specify CIDR block for VPC"
-#  default = "10.0.2.0/16"
-#}
-#variable "cidr_subnet_b" {
-#    type = string
-#    description = "specify az for subnet"
-#    default = "	us-west-2b"
-#}
-
+variable "int_gway" {
+  type = string
+  description = "create a intgateay"
+  default = "task_vpc"
+}
 
 
 
