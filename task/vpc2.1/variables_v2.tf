@@ -28,7 +28,9 @@ variable "my_subnets"{
    "b" = {
      az = "us-west-2b"
      cidr = "10.0.2.0/24"
-
+     tags = {
+       "key" = "public_subnet_b"
+     }
    }
  }
 }
