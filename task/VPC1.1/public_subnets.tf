@@ -1,4 +1,4 @@
-#Create subnets - public 
+#--- Create Subnets - Public ---
 
 resource "aws_subnet" "public_a" {
     vpc_id = aws_vpc.task_vpc.id
@@ -17,13 +17,13 @@ resource "aws_subnet" "public_c" {
   cidr_block       = var.public_subnet_cidr_block_c
 }
 
-#Create Internet Gateway and attach it to the Public-Route-Table 
+#--- Create Internet Gateway and attach TO VPC ---
 
 resource "aws_internet_gateway" "int_gway" {
   vpc_id = aws_vpc.task_vpc.id
 }
 
-#Create a route table - public 
+#--- Create a Route Table - Public ---
 
 resource "aws_route_table" "public_route_table" {
   vpc_id = aws_vpc.task_vpc.id
