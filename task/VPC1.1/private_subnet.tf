@@ -1,4 +1,4 @@
-#--- Create subnets - private ----
+#   --- Create subnets - private ----
 
 resource "aws_subnet" "private_a" {
     vpc_id = aws_vpc.task_vpc.id
@@ -18,7 +18,7 @@ resource "aws_subnet" "private_c" {
   cidr_block       = var.private_subnet_cidr_block_c
 }
 
-#--- Create a route table - private ---
+#   --- Create a route table - private ---
 resource "aws_route_table" "tasktest_private_route_table" {
   vpc_id = aws_vpc.task_vpc.id
 
@@ -28,14 +28,14 @@ resource "aws_route_table" "tasktest_private_route_table" {
   }
 }
 
-#--- Create NAT gateway ---  
+#   --- Create NAT gateway ---  
 
 resource "aws_nat_gateway" "nat_gway" {
   connectivity_type = "public"
   subnet_id         = aws_subnet.public_a.id
 }
 
-#--- Allocate Elastic IP Address ---
+#   --- Allocate Elastic IP Address ---
 resource "var.nat_eip" {
     vpc = true 
 }

@@ -1,4 +1,4 @@
-#--- VPC ---
+#   --- VPC ---
 variable "vpc_name" {
     type = string
     description = "name for vpc"
@@ -9,7 +9,7 @@ variable "vpc_cidr_block" {
   description = "specify CIDR block for VPC"
   default = "10.0.0.0/16"
 }
-#--- Public Subnets ---
+#   --- Public Subnets ---
 variable "public_subnet_a" {
     type = string
     description = "specify az for subnet"
@@ -41,14 +41,14 @@ variable "public_subnet_cidr_block_c" {
   description = "specify CIDR block for VPC"
   default = "10.0.3.0/24"
 }
-#--- Create Internet Gateway --- 
+#   --- Create Internet Gateway --- 
 
 variable "int_gway" {
   type = string
   description = "create a intgateay"
   default = "task_vpc"
 }
-#--- Create a Route Table - Public 
+#   --- Create a Route Table - Public 
 
 variable "public_route_table" {
   description = "create a route table"
@@ -59,7 +59,7 @@ variable "public_route_table_cidr" {
   default = "0.0.0.0/0"
 }
 
-#--- Create Subnets - Private 
+#   --- Create Subnets - Private 
 
 variable "private_subnet_a" {
     type = string
@@ -91,7 +91,7 @@ variable "private_subnet_cidr_block_c" {
   description = "specify CIDR block for VPC"
   default = "10.0.12.0/24"
 }
-#--- Allocate Elastic IP Address ---
+#   --- Allocate Elastic IP Address ---
 variable "nat_eip"{
   type = string
   description = "ellocate an Elastic IP address to the NAT gateway."
