@@ -2,8 +2,8 @@
 
 resource "aws_subnet" "public_subnet" {
     vpc_id = aws_vpc.task_vpc.id
-    az = var.public_subnet_az[0]
-  cidr  = var.public_subnet_cidr_block[0]
+    avavailability_zone = var.public_subnet_az[0]
+  cidr_block = var.public_subnet_cidr_block[0]
 }
 
 #resource "aws_subnet" "public_b" {
