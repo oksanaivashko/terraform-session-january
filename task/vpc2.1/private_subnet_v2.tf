@@ -20,17 +20,14 @@ resource "aws_subnet" "private_subnet_c" {
 
 #   --- Create NAT gateway ---  
 
-resource "aws_nat_gateway" "nat_gway" {
-  allocation_id = aws_eip.nat_eip.id
-  connectivity_type = "public"
-  subnet_id         = var.public_subnet_az
-  depends_on = var.int_gway
-    tags = {
-    Name = "nat_gway"
-  }
+resource "aws_nat_gateway" "nat_gway"{
+    subnet_id = var.public_subnet_az
+    connectivity_type = "public"
+    allocation_id = var.nat_eip
+    tags ={
+        Name = var.nat_gway
+    }
 }
-
-
 
 
 #Allocate Elastic IP Address
