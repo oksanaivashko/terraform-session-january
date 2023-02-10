@@ -1,9 +1,10 @@
 #   --- Create Subnets - Public ---
 
-resource "aws_subnet" "public_a" {
+resource "aws_subnet" "public_subnet_a" {
     vpc_id = aws_vpc.task_vpc.id
-  availability_zone = var.my_subnets
-  cidr_block       = var.my_subnets
+  for_each = var.my_subnets
+  cidr_block  = each.value["cidr"]
+  tags = each.value["tags"]
 }
 
 #resource "aws_subnet" "public_b" {
