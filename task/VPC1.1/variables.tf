@@ -90,3 +90,5 @@ variable "private_subnet_cidr_block_c" {
   description = "specify CIDR block for VPC"
   default = "10.0.12.0/24"
 }
+
+

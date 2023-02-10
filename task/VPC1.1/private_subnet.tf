@@ -25,7 +25,7 @@ resource "aws_subnet" "private_c" {
 }
 
 #Create NAT gateway  
-#
+
 #Name tag 
 #Select a subnet in which to create the NAT gateway = only from public subnet 
 #Connectivity type = public 
