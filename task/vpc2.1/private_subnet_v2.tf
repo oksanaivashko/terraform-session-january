@@ -18,9 +18,9 @@ resource "aws_subnet" "private_subnet_c" {
   cidr_block = var.private_subnet_cidr_block[2]
 }
 
-#--- Create a route table - private ---
+#--- Create a Private Route Table ---
 
-resource "aws_route_table" "tasktest_private_route_table" {
+resource "aws_route_table" "private_route_table" {
   vpc_id = aws_vpc.task_vpc.id
 
   route {
