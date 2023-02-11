@@ -27,6 +27,7 @@ variable "public_subnet_cidr_block" {
 
 variable "public_route_table" {
   description = "create a public route table"
+  type = string
   default = "task_vpc"
 }
 
@@ -55,8 +56,10 @@ variable "private_subnet_cidr_block" {
 }
 
 #--- Create a Private Route Table --- 
+
 variable "private_route_table" {
   description = "create a private route table"
+  type = string
   default = "task_vpc"
 }
 
