@@ -13,3 +13,11 @@ variable "sg_name"{
     description = " This is a sg name"
     default = "security_group"
 }
+
+variable "ports"{
+    type = list(string)
+    description = " This is a list of ports"
+    default = ["22"]
+}
+
+#element (list, index)
