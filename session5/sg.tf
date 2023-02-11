@@ -1,7 +1,7 @@
-resource "aws_security_group" "test_vpc_sg" {   
-  name        = "main"
-  description = "Allow SSH inbound traffic"
-
+resource "aws_security_group" "main_sg" {
+  name        = "${var.env}-sg"
+  description = format("%s-sg", var.env)
+  #vpc_id      = var.vpc_id
   ingress {
     from_port        = 22
     to_port          = 22
@@ -12,6 +12,6 @@ resource "aws_security_group" "test_vpc_sg" {
     from_port        = 0
     to_port          = 0
     protocol         = "-1" # string # All ports and protocols
-    cidr_blocks      = ["0.0.0.0/0"] 
+    cidr_blocks      = ["0.0.0.0/0"]
   }
 }
