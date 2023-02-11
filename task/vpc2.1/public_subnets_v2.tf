@@ -31,7 +31,7 @@ resource "aws_route_table" "public_route_table" {
   vpc_id = aws_vpc.task_vpc.id
 
   route {
-    cidr_block = var.public_route_table
+    cidr_block = var.public_route_table_cidr
     gateway_id = aws_internet_gateway.int_gway.id
   }
 }
