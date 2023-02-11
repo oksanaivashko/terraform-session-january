@@ -7,7 +7,7 @@ resource "aws_security_group_rule" "ingress" {
   count = 2
   type              = "ingress"
   to_port           = element( var.ports, 0) 
-  protocol          = "-tcp"
+  protocol          = "tcp"
   from_port         = element( var.ports, 0) 
   cidr_blocks = ["0.0.0.0/0"]
   security_group_id = aws_security_group.main_sg1.id
@@ -22,4 +22,9 @@ resource "aws_security_group_rule" "egress" {
 }
 
 
-
+# count.index = go and count the index 
+#count = 2
+#count.index = 0, 1
+#
+#count = 5
+#count.index = 0, 1, 2, 3, 4
