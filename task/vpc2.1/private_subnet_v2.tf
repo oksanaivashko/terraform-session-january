@@ -23,7 +23,7 @@ resource "aws_subnet" "private_subnet_c" {
 resource "aws_nat_gateway" "nat_gway"{
     subnet_id = var.public_subnet_az[0]
     connectivity_type = "public"
-    allocation_id = "default"
+    allocation_id = aws_eip.nat_gway_eip.id
     tags ={
         Name = var.nat_gway
     }
