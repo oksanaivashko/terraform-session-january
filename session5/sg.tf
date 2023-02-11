@@ -4,6 +4,7 @@ resource "aws_security_group" "main_sg1" {
   #vpc_id      = var.vpc_id
 }
 resource "aws_security_group_rule" "ingress" {
+  count = 2
   type              = "ingress"
   to_port           = element( var.ports, 0) 
   protocol          = "-tcp"

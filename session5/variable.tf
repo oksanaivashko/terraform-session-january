@@ -17,7 +17,7 @@ variable "main_sg1"{
 variable "ports"{
     type = list(string)
     description = " This is a list of ports"
-    default = ["22"]
+    default = ["22", "80"]
 }
 
 #element (list, index)
