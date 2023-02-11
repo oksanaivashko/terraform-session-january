@@ -18,6 +18,18 @@ resource "aws_subnet" "private_subnet_c" {
   cidr_block = var.private_subnet_cidr_block[2]
 }
 
+#--- Create a route table - private ---
+
+resource "aws_route_table" "tasktest_private_route_table" {
+  vpc_id = aws_vpc.task_vpc.id
+
+  route {
+    cidr_block = var.public_route_table_cidr
+    nat_gateway_id = aws_nat_gateway.nat_gway.id
+  }
+}
+
+
 #   --- Create NAT gateway ---  
 
 resource "aws_nat_gateway" "nat_gway"{
