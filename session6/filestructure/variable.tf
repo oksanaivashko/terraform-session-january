@@ -1,5 +1,5 @@
 variable "env"{
-    type = list
+    type = string
     description = " This is an environemant name"
     default = "qa"
 }
