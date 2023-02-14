@@ -7,6 +7,8 @@ resource "aws_instance" "first_ec2" { #first label predifined by terraform and s
   }
 }
 
+# --- Notes --- 
+
 // A block is a container for other conten: 
 // A block has a type (resource in this example) 
 // Each block type defines how many labels must follow the type keyword 

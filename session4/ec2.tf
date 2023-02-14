@@ -21,3 +21,8 @@ resource "aws_instance" "main_backend" {
     Name1 = format("%s-instance", var.env)
   }
 }
+
+# References:
+# 1. Resource 
+# 2. Input Variable
+# 3. Data source

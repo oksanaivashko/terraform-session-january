@@ -15,13 +15,15 @@ filter {
     values = ["x86_64"] #ami source
   }
 }
-#create an ami
-#resource "aws_instance" "first_ec2" { 
-# ami = aws_ami 
-#}
+ 
+
 
 
 #Referrences:
-#resource 
-#input variable
-#data source
+#Resource 
+#Input variable
+#Data source
+
+# Reference to Data Source
+# Syntax:
+# data.first_label.second_label.attribute
