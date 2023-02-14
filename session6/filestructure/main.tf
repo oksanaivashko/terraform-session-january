@@ -1,6 +1,10 @@
 resource "aws_sqs_queue""main"{
-    count = 2
-    name = "${var.env}-sqs"
-    Name1       = format("%s-instance", var.env)
-    
+    name = "${var.env}-qa"
+    tags = {
+        Environment = var.env
+        Name = format("%s-qa", var.env)
+    }
 }
+
+# if you want tomanage isolate infrastructure and reuse your configuratoin files you must isolate the backend
+# isolating backendterraform.tfstate = isolating wnvironment
