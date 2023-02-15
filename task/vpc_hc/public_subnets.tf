@@ -9,21 +9,21 @@
 
 
 resource "aws_subnet" "public_a" {
-    vpc_id = aws_vpc.task_vpc.id
+  vpc_id            = aws_vpc.task_vpc.id
   availability_zone = "us-west-2a"
-  cidr_block       = "10.0.1.0/24"
+  cidr_block        = "10.0.1.0/24"
 }
 
 resource "aws_subnet" "public_b" {
-    vpc_id = aws_vpc.task_vpc.id
+  vpc_id            = aws_vpc.task_vpc.id
   availability_zone = "us-west-2b"
-  cidr_block       = "10.0.2.0/24"
+  cidr_block        = "10.0.2.0/24"
 }
 
 resource "aws_subnet" "public_c" {
-    vpc_id = aws_vpc.task_vpc.id
+  vpc_id            = aws_vpc.task_vpc.id
   availability_zone = "us-west-2c"
-  cidr_block       = "10.0.3.0/24"
+  cidr_block        = "10.0.3.0/24"
 }
 
 #Create Internet Gateway and attach it to the Public-Route-Table 

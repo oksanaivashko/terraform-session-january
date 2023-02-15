@@ -1,21 +1,21 @@
 #   --- Create Subnets - Public ---
 
 resource "aws_subnet" "public_subnet_a" {
-    vpc_id = aws_vpc.task_vpc.id
-    availability_zone = var.public_subnet_az[0]
-  cidr_block = var.public_subnet_cidr_block[0]
+  vpc_id            = aws_vpc.task_vpc.id
+  availability_zone = var.public_subnet_az[0]
+  cidr_block        = var.public_subnet_cidr_block[0]
 }
 
 resource "aws_subnet" "public_subnet_b" {
-    vpc_id = aws_vpc.task_vpc.id
-    availability_zone = var.public_subnet_az[1]
-  cidr_block = var.public_subnet_cidr_block[1]
+  vpc_id            = aws_vpc.task_vpc.id
+  availability_zone = var.public_subnet_az[1]
+  cidr_block        = var.public_subnet_cidr_block[1]
 }
 
 resource "aws_subnet" "public_subnet_c" {
-    vpc_id = aws_vpc.task_vpc.id
-    availability_zone = var.public_subnet_az[2]
-  cidr_block = var.public_subnet_cidr_block[2]
+  vpc_id            = aws_vpc.task_vpc.id
+  availability_zone = var.public_subnet_az[2]
+  cidr_block        = var.public_subnet_cidr_block[2]
 }
 
 

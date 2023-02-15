@@ -7,21 +7,21 @@
 #Attach to NAT gateway
 
 resource "aws_subnet" "private_a" {
-    vpc_id = aws_vpc.task_vpc.id
+  vpc_id            = aws_vpc.task_vpc.id
   availability_zone = "us-west-2a"
-  cidr_block       = "10.0.10.0/24"
+  cidr_block        = "10.0.10.0/24"
 }
 
 resource "aws_subnet" "private_b" {
-    vpc_id = aws_vpc.task_vpc.id
+  vpc_id            = aws_vpc.task_vpc.id
   availability_zone = "us-west-2b"
-  cidr_block       = "10.0.11.0/24"
+  cidr_block        = "10.0.11.0/24"
 }
 
 resource "aws_subnet" "private_c" {
-    vpc_id = aws_vpc.task_vpc.id
+  vpc_id            = aws_vpc.task_vpc.id
   availability_zone = "us-west-2c"
-  cidr_block       = "10.0.12.0/24"
+  cidr_block        = "10.0.12.0/24"
 }
 
 #Create NAT gateway  
@@ -46,7 +46,7 @@ resource "aws_route_table" "tasktest_private_route_table" {
   vpc_id = aws_vpc.task_vpc.id
 
   route {
-    cidr_block = "0.0.0.0/0"
+    cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.nat_gway.id
   }
 }
