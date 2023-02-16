@@ -68,6 +68,12 @@ variable "cidr_bloc_public_route_table" {
   default = "0.0.0.0/0"
 }
 
+variable "cidr_block_private_route_table" {
+  type = string
+  description = "Defines cidr block for private route table"
+  default = "0.0.0.0/0"
+}
+
 #   --- Create Internet Gateway --- 
 
 variable "int_gway" {
