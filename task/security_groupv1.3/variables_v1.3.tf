@@ -45,7 +45,3 @@ variable "cidr" {
   description = "Defines CIDR block for all traffic"
   default = "0.0.0.0/0"
 }
-
-variable "description" {
-  
-}

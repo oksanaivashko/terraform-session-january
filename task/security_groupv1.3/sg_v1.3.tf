@@ -1,44 +1,26 @@
-resource "aws_security_group" "sg_v1" {
-  name        = var.sg_name
-  description = var.description
-  vpc_id      = var.vpc_id
-
-  ingress {
-    description = var.description
-    from_port   = var.port1
-    to_port     = var.port1
-    protocol    = var.protocol
-    cidr_blocks = [var.cidr]
-  }
-  ingress {
-    description = var.description
-    from_port   = var.port2
-    to_port     = var.port2
-    protocol    = var.protocol
-    cidr_blocks = [var.cidr]
-  }
-
-  ingress {
-    description = var.description
-    from_port   = var.port3
-    to_port     = var.port3
-    protocol    = var.protocol
-    cidr_blocks = [var.cidr]
-  }
-  ingress {
-    description = var.description
-    from_port   = var.port4
-    to_port     = var.port4
-    protocol    = var.protocol
-    cidr_blocks = [var.cidr]
-  }
-
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = var.protocol
-    cidr_blocks = [var.cidr]
-  }
+   
+resource "aws_security_group" "sg_v1.1" {
+  name        = replace(local.name , "resource","securitygroup")
+  description = "This security group allows inbound traffic for 4 ports"
+  vpc_id = var.vpc_id
+  tags = local.common_tags
 }
 
+resource "aws_security_group_rule" "ingress" {
+  count = length(var.ports)
+  type              = "ingress"
+  to_port           = element(var.ports , count.index) 
+  from_port         = element(var.ports , count.index)
+  cidr_blocks = [ var.cidr_block_all ]
+  security_group_id = aws_security_group.sg_v1.1.id
+  protocol          = var.protocol
+}
+
+resource "aws_security_group_rule" "egress" {
+  type              = "egress"
+  to_port           = 0
+  protocol          = "-1"
+  from_port         = 0
+  security_group_id = aws_security_group.sg_v1.1.id
+  cidr_blocks = [ var.cidr_block_all ]
+}
