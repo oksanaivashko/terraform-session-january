@@ -12,7 +12,7 @@ resource "aws_security_group_rule" "ingress" {
   to_port           = element(var.ports , count.index) 
   from_port         = element(var.ports , count.index)
   cidr_blocks = [ var.cidr_block_all ]
-  security_group_id = aws_security_group.sg_v1.1.id
+  security_group_id = aws_security_group.sg_v3.id
   protocol          = var.protocol
 }
 
@@ -21,6 +21,6 @@ resource "aws_security_group_rule" "egress" {
   to_port           = 0
   protocol          = "-1"
   from_port         = 0
-  security_group_id = aws_security_group.sg_v1.1.id
+  security_group_id = aws_security_group.sg_v3.id
   cidr_blocks = [ var.cidr_block_all ]
 }
