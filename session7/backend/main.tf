@@ -14,7 +14,7 @@ resource "aws_db_instance" "main" {
 }
 
 resource "random_password" "db_password" {
-    lenght = 20
+    length = 20
     special = true
     override_special = "%@"
   }
