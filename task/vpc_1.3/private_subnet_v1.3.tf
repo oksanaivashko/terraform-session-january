@@ -2,20 +2,20 @@
 
 resource "aws_subnet" "private_subnet_a" {
   vpc_id            = aws_vpc.task_vpc.id
-  availability_zone = var.private_subnet_az[0]
-  cidr_block        = var.private_subnet_cidr_block[0]
+  availability_zone = var.availability_zone[0]
+  cidr_block        = var.cidr_block[3]
 }
 
 resource "aws_subnet" "private_subnet_b" {
   vpc_id            = aws_vpc.task_vpc.id
-  availability_zone = var.private_subnet_az[1]
-  cidr_block        = var.private_subnet_cidr_block[1]
+  availability_zone = var.availability_zone[1]
+  cidr_block        = var.cidr_block[4]
 }
 
 resource "aws_subnet" "private_subnet_c" {
   vpc_id            = aws_vpc.task_vpc.id
-  availability_zone = var.private_subnet_az[2]
-  cidr_block        = var.private_subnet_cidr_block[2]
+  availability_zone = var.availability_zone[2]
+  cidr_block        = var.cidr_block[5]
 }
 
 #--- Create a Private Route Table ---
