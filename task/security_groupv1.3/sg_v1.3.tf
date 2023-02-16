@@ -1,5 +1,5 @@
    
-resource "aws_security_group" "sg_v1.1" {
+resource "aws_security_group" "sg_v3" {
   name        = replace(local.name , "resource","securitygroup")
   description = "This security group allows inbound traffic for 4 ports"
   vpc_id = var.vpc_id
