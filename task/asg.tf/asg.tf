@@ -1,4 +1,4 @@
-resource "aws_autoscaling_group" "homework_task" {
+resource "aws_autoscaling_group" "homework_task_asg" {
     name = "${var.env}-homework_task_asg"
     max_size = var.max_size
     min_size = var.min_size
