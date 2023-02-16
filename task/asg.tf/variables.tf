@@ -1,8 +1,4 @@
-variable "env" {
-  type        = string
-  description = " This is an intance env for EC2 Instance"
-  default     = "dev"
-}
+# variables for lc
 
 variable "task-launch-config" {
   type        = string
@@ -15,6 +11,49 @@ variable "instance_type" {
   description = " This is an intance type for lc"
   default     = "t2.micro"
 }
+
+# --- variables for vpc --- 
+
+variable "vpc_cidr_block" {
+  type = string
+  default = "10.0.0.0/16"
+}
+
+variable "inst_tenancy" {
+  type = string
+  default = "default"
+}
+
+# --- local common tags ---
+
+variable "env" {
+  type = string
+  default = "dev"
+}
+variable "team" {
+  type = string
+  default = "akumo"
+}
+variable "app" {
+  type = string
+  default = "homework-task"
+}
+variable "index" {
+  type = string
+  default = "0"
+}
+variable "managed_by" {
+  type = string
+  default = "Terraform"
+}
+variable "owner" {
+  type = string
+  default = "oksana"
+}
+
+# --- variables for security group for lc_sg ---
+
+
 
 # --- Variables for AutoScaling Group ---
 
