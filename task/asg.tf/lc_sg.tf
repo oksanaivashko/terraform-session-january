@@ -1,7 +1,7 @@
 resource "aws_security_group" "lc_sg" {
   name        = replace(local.name , "resource","securitygroup")
   description = "This security group is for lc"
-  vpc_id = var.vpc_id
+  vpc_id = aws_vpc.task_vpc.id
   tags = local.common_tags
 }
 
