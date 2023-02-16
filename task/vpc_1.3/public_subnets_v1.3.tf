@@ -33,10 +33,10 @@ resource "aws_internet_gateway" "int_gway" {
 
 resource "aws_route_table" "public_route_table" {
   vpc_id = aws_vpc.task_vpc.id
+  tags = local.common_tags
 
   route {
     cidr_block = var.cidr_bloc_public_route_table
     gateway_id = aws_internet_gateway.int_gway.id
-    tags = local.common_tags
   }
 }
