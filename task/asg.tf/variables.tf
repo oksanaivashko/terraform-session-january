@@ -74,6 +74,7 @@ variable "cidr_block_all" {
   default = "0.0.0.0/0"
 }
 
+
 # --- Variables for AutoScaling Group ---
 
 variable "max_size" {
@@ -103,5 +104,5 @@ variable "force_delete" {
 variable "vpc_zone_identifier" {
   type        = list(string) 
   description = "This is the list of the subnets where to create the ec2 instances"
-  default     = [	subnet-0493d77dbb8da329e, subnet-0227e79e2b0117cc4]
+  default = [ "subnet-0493d77dbb8da329e", "	subnet-0227e79e2b0117cc4" ]
 }
