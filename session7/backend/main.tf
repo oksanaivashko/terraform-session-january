@@ -8,8 +8,8 @@ resource "aws_db_instance" "main" {
   username             = "admin"
   password             = random_password.db_password.result
   parameter_group_name = "default.mysql5.7"
-  skip_final_snapshot  = var.env != "proud" ? true : false    # if env = dev, true
-  final_snapshot_identifier = var.env != "proud" ? null : "${var.env}db-final-snapshot"  #if env = dev, null
+  skip_final_snapshot  = var.env != "prod" ? true : false    # if env = dev, true
+  final_snapshot_identifier = var.env != "prod" ? null : "${var.env}-db-final-snapshot"  #if env = dev, null
 
 }
 
