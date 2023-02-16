@@ -51,7 +51,7 @@ variable "cidr_block" {
 
 variable "subnet_name" {
     type = list(string)
-    description = "Gives name for each subnet"
+    decription = "Gives name for each subnet"
     default = [ "public_subnet_a", "public_subnet_b", "public_subnet_c", "private_subnet_a", "private_subnet_b", "private_subnet_c" ]
   
 }
