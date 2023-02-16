@@ -51,9 +51,28 @@ variable "owner" {
   default = "oksana"
 }
 
-# --- variables for security group for lc_sg ---
+# --- variables for lc_sg ---
 
-
+variable "protocol" {
+  type = string
+  description = "Specify protocol type"
+  default = "tcp"
+}
+variable "ports" {
+  type = list(string)
+  description = "List of ports"
+  default = ["22","80","3306","443"]
+}
+variable "vpc_id" {
+  type = string
+  description = "Identifiying default vpc id"
+  default = "vpc-0a42426aa52e0c8f9"
+}
+variable "cidr_block_all" {
+  type = string
+  description = "Defines CIDR block for all traffic"
+  default = "0.0.0.0/0"
+}
 
 # --- Variables for AutoScaling Group ---
 
