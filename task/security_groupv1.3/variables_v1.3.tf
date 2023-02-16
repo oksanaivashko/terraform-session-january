@@ -40,8 +40,12 @@ variable "vpc_id" {
   description = "Identifiying default vpc id"
   default = "vpc-0a42426aa52e0c8f9"
 }
-variable "cidr_block_all" {
+variable "cidr" {
   type = string
   description = "Defines CIDR block for all traffic"
   default = "0.0.0.0/0"
+}
+
+variable "description" {
+  
 }
