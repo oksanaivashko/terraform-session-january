@@ -4,25 +4,28 @@ resource "aws_subnet" "private_subnet_a" {
   vpc_id            = aws_vpc.task_vpc.id
   availability_zone = var.availability_zone[0]
   cidr_block        = var.cidr_block[3]
+  tags = local.common_tags
 }
 
 resource "aws_subnet" "private_subnet_b" {
   vpc_id            = aws_vpc.task_vpc.id
   availability_zone = var.availability_zone[1]
   cidr_block        = var.cidr_block[4]
+  tags = local.common_tags
 }
 
 resource "aws_subnet" "private_subnet_c" {
   vpc_id            = aws_vpc.task_vpc.id
   availability_zone = var.availability_zone[2]
   cidr_block        = var.cidr_block[5]
+  tags = local.common_tags
 }
 
 #--- Create a Private Route Table ---
 
 resource "aws_route_table" "private_route_table" {
   vpc_id = aws_vpc.task_vpc.id
-
+    tags = local.common_tags
   route {
     cidr_block = var.cidr_block_private_route_table
     nat_gateway_id = aws_nat_gateway.nat_gway.id
