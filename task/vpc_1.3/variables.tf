@@ -61,3 +61,34 @@ variable "cidr_blocks" {
   description = "defines CIDR block for all traffic"
   default = "0.0.0.0/0"
 }
+
+variable "cidr_bloc_public_route_table" {
+  type = string
+  description = "Defines cidr block for public route table"
+  default = "0.0.0.0/0"
+}
+
+#   --- Create Internet Gateway --- 
+
+variable "int_gway" {
+  type        = string
+  description = "create a intgateay"
+  default     = "task_vpc"
+}
+
+#--- Create a NatGateway ---
+
+variable "nat_gway" {
+  type        = string
+  description = "create a natgateay"
+  default     = "task_vpc"
+}
+
+
+#   --- Allocate Elastic IP Address ---
+
+variable "nat_eip" {
+  type        = string
+  description = "ellocate an Elastic IP address to the NAT gateway."
+  default     = "nat_gway"
+}
