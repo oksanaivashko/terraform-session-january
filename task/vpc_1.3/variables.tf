@@ -45,13 +45,13 @@ variable "availability_zone" {
 
 variable "cidr_block" {
     type = list(string)
-    decription = "Defines cidr block for each subnet"
+    description = "Defines cidr block for each subnet"
     default = [ "10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24", "10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24" ]
 }
 
 variable "subnet_name" {
     type = list(string)
-    decription = "Gives name for each subnet"
+    description = "Gives name for each subnet"
     default = [ "public_subnet_a", "public_subnet_b", "public_subnet_c", "private_subnet_a", "private_subnet_b", "private_subnet_c" ]
   
 }
