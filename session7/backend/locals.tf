@@ -8,17 +8,3 @@ locals {
     Owner       = var.owner
   }
 }
-
-
-#providers-team-env-app-resource-index = naming standard
-
-# aws-cloud-dev-jerry-loadbalancer-0 
-
-# Common Tags:
-
-# 1. Name = aws-cloud-dev-jerry-loadbalancer-0
-# 2. Environment = Dev
-# 3. Team = Cloud 
-# 4. App  = Jerry
-# 5. Managed_By = "Terraform, Cloudformation, Python, Manual"
-# 6. Owner = "Kris"

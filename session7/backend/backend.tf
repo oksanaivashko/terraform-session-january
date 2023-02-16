@@ -6,5 +6,3 @@ terraform {
     dynamodb_table = "terraform-session-sep-state-lock"
   }
 }
-
-
