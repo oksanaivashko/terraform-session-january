@@ -3,4 +3,5 @@ resource "aws_launch_configuration" "linux" {
   image_id        = data.aws_ami.amazon_linux_2.id
   instance_type   = var.instance_type
   security_groups = [aws_security_group.lc_sg.id]
+  tags = local.common_tag
 }
