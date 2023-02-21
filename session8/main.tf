@@ -15,13 +15,19 @@ provisioner "file" {
     private_key = file("~/.ssh/id_rsa")
   }
 }
-provisioner "remote_exem" {
+provisioner "remote_exec" {
   inline = [
     "sudo yum install httpd -y",
-    "sudo systemctl enable httpd",
-    "sudo systemctl start httpd",
-    "sudo cp /tmp/inde.html/var/www/html.index.html"
+            "sudo systemctl enable httpd",
+            "sudo systemctl start httpd",
+            "sudo cp /tmp/index.html /var/www/html/index.html"
    ]
+   connection {
+    type = "ssh"
+    user = "ec2-user"
+    host = self.public_ip
+    private_key = file("~/.ssh/id_rsa")
+  }
  }
 }
 
