@@ -5,7 +5,7 @@ resource "aws_instance" "first_ec2" {
   vpc_security_group_ids = [aws_security_group.main.id]
 
 provisioner "file" {
-  source = "home/ec2-user/terraform-sesion-january/session8/index.html" #path on terraform servwer
+  source = "/home/ec2-user/terraform-session-january/session8/index.html" #path on terraform servwer
   destination = "tmp/index.html"  #path for the remote server
 
   connection {
