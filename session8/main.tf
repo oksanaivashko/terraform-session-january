@@ -15,7 +15,7 @@ provisioner "file" {
     private_key = file("~/.ssh/id_rsa")
   }
 }
-provisioner "remote_exec" {
+provisioner "remote-exec" {
   inline = [
     "sudo yum install httpd -y",
             "sudo systemctl enable httpd",
