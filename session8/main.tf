@@ -6,7 +6,7 @@ resource "aws_instance" "first_ec2" {
 
 provisioner "file" {
   source = "/home/ec2-user/terraform-session-january/session8/index.html" #path on terraform servwer
-  destination = "/tmp/index.html"  #path for the remote server
+  destination = "/tmp/inde.html"  #path for the remote server
 
   connection {
     type = "ssh"
@@ -15,11 +15,23 @@ provisioner "file" {
     private_key = file("~/.ssh/id_rsa")
   }
 }
+provisioner "remote_exem" {
+  inline = [
+    "sudo yum install httpd -y",
+    "sudo systemctl enable httpd",
+    "sudo systemctl start httpd",
+    "sudo cp /tmp/inde.html/var/www/html.index.html"
+   ]
+ }
 }
-
 
 
 resource "aws_key_pair" "terraform_server" {
   key_name = "Terraform-Server-Key"
   public_key = file("~/.ssh/id_rsa.pub")
+}
+
+
+output "instance_ip" {
+value = aws_instance.first_ec2.public_ip
 }
