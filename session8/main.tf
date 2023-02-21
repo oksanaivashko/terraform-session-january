@@ -6,7 +6,7 @@ resource "aws_instance" "first_ec2" {
 
 provisioner "file" {
   source = "/home/ec2-user/terraform-session-january/session8/index.html" #path on terraform servwer
-  destination = "/tmp/inde.html"  #path for the remote server
+  destination = "/tmp/index.html"  #path for the remote server
 
   connection {
     type = "ssh"
