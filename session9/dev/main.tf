@@ -15,9 +15,13 @@ module "ec2_instance" {
   ami = "ami-0f1a5f5ada0e7da53"
   instance_type = "t2.micro"
   sg = [module.ec2_sg.id]
+}
 
 module "ec2_sg" {
   source = "../../modules/sg"
   env = "dev"
 
 }
+
+# how to reference to child module? 
+# you only can refference to 
