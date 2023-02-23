@@ -14,7 +14,7 @@ module "ec2_instance" {
   env = "dev"
   ami = "ami-0f1a5f5ada0e7da53"
   instance_type = "t2.micro"
-  sg = [module.ec2_sg.id]
+  sg = [module.ec2_main_sg_id]
 }
 
 module "ec2_sg" {
@@ -24,4 +24,4 @@ module "ec2_sg" {
 }
 
 # how to reference to child module? 
-# you only can refference to 
+# you only can refference to child module output
