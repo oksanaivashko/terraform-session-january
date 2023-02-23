@@ -12,4 +12,3 @@ resource "aws_instance" "ec2_class_task1" {
 # count is mete argument, help you replicating the resources 
 #will work with the most resources but some resources(egress,ingress)
 #count will indicate as index and create in totla the number resources
-#

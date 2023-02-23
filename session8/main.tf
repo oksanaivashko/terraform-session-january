@@ -46,5 +46,4 @@ resource "null_resource" "local_script" {
   provisioner "local-exec" {
     command = "echo 'Hello World from server!' >> local.txt"
   }
-  
 }
