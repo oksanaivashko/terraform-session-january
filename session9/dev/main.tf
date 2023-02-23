@@ -11,7 +11,7 @@ module "ec2_instance" {
 
 ########################## Varialbes ###########################
 
-env = "dev"
-ami = "ami-0f1a5f5ada0e7da53"
-instance_type = "t2.micro"
+  env = "dev"
+  ami = "ami-0f1a5f5ada0e7da53"
+  instance_type = "t2.micro"
 }
