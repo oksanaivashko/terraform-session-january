@@ -7,6 +7,17 @@ module "ec2" {
   instance_type = "t2.micro"
 }
 
+module "sg" {
+  source  = "https://github.com/oksanaivashko/terraform-session-january//modules/sg"
+}
+
+# --- Calling a child module from registry ---
+##    
+##    module "vpc" {
+##      source  = "terraform-aws-modules/vpc/aws"
+##      version = "3.19.0"
+##    }
+
 ### URL Stracture
 #  github.com = Domain Name (SCM)
 #  /oksanaivashko = USER
@@ -19,3 +30,5 @@ module "ec2" {
 
 
 #  ?ref=v1.0.0   (release version)
+
+
