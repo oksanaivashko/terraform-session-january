@@ -1,5 +1,5 @@
 module "ec2" {
-  source = "github.com/oksanaivashko/terraform-session-january/modules/ec2?ref=v1.0.0"
+  source = "github.com/oksanaivashko/terraform-session-january//modules/ec2?ref=v1.0.0"
   env = "dev"
   ami = "ami-06e85d4c3149db26a"
   instance_type = "t2.micro"
