@@ -8,7 +8,7 @@ module "ec2" {
 }
 
 module "sg" {
-  source  = "https://github.com/oksanaivashko/terraform-session-january//modules/sg"
+  source  = "github.com/oksanaivashko/terraform-session-january//modules/sg"
 }
 
 # --- Calling a child module from registry ---
