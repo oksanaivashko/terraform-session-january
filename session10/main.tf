@@ -9,6 +9,7 @@ module "ec2" {
 
 module "sg" {
   source  = "github.com/oksanaivashko/terraform-session-january//modules/sg"
+  env = "dev"
 }
 
 # --- Calling a child module from registry ---
