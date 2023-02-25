@@ -3,7 +3,10 @@
 # 2. Root module where you run terraform command.
 # 
 # Root mosule = call the child module 
+# Root module where you run the command, create working directory.
 # Local  module = moved is in your filesystem
+# Terraform module to manage multiple environment and infrastrucutre. 
+# You make your code reusuble. 
 
 module "ec2_instance" {
   source = "../../modules/ec2" # where terraform child is sitting
